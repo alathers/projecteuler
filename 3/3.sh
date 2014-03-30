@@ -19,18 +19,8 @@
 ##			Runtime over 100x (17.590s)
 #################
 
-function is_prime () {
-	tester=2
-	while [ $(($tester*$tester)) -lt $1 ]; do 
-		if [ $(($1%${tester})) -eq 0 ]; then
-			echo $tester
-			return 1
-		fi
-		tester=$(($tester+1))
-	done
-	echo 'prime'
-	return 0
-}
+# Since this is a growing solution set, might as well make libraries instead of cut/paste all the time
+. ../lib-sh/prime.sh
 
 bound=600851475143
 
