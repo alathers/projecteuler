@@ -6,7 +6,7 @@ def symmetricSubsetGrid (inGrid, x, y, width)
             if y+colnum < inGrid.length && x+rownum < inGrid.length
                 newGrid[colnum][rownum] = inGrid[y+colnum][x+rownum]
             else
-                newGrid[colnum][rownum] = 0
+                newGrid[colnum][rownum] = 1
             end
         end
     end
