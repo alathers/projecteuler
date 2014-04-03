@@ -13,3 +13,9 @@ def isPrimeBruterForce (testPrime)
     end
     return [true,0]
 end
+
+    ### This needs to be rethought
+    ## I could consider bounding with the set of already discovered primes maybe?
+    ## Basically all numbers are either divisible by a prime, or are a prime.
+    ## So if I seed with the set of discovered primes, then I could reduce this to something closer to O(n)-ish, or less
+    
