@@ -13,6 +13,23 @@ require '../lib-ruby/prime.rb'
 
 # O(n^2) sadness.  
 sum=0
+primes=Array.new(1) {2}
+(2..2000000).each do |testval| # Exclude 1 since it's abnormal
+    testPrime=isPrimeBruterForceSeeded(testval, primes)
+    if (testPrime[0])
+        primes << testval
+        sum+=testval
+    end
+end
+
+puts sum
+
+
+
+=begin
+
+# O(n^2) sadness.  
+sum=0
 (2..2000000).each do |test| # Exclude 1 since it's abnormal
     if (isPrimeBruterForce test)[0]
         sum+=test
@@ -21,7 +38,7 @@ end
 
 puts sum
 
-=begin
+
 ABYSMAL RUNTIME    
 142913828923
 
