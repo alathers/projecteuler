@@ -27,9 +27,9 @@ What is the value of the first triangle number to have over five hundred divisor
 
 =end
 
-require '../lib-ruby/triangle.rb'
-require '../lib-ruby/divisor.rb'
+require '../lib-ruby/myInteger.rb'
 
+=begin
 divisorGoal=200
 divisors=Array.new
 triangleCounter=0
@@ -37,6 +37,15 @@ while divisors.length < divisorGoal do
     triangleCounter+=1
     divisors=factor( triangleNum triangleCounter)
 end
-
-
 puts "#{triangleCounter} : " + triangleNum(triangleCounter).to_s
+=end
+
+
+i=1
+limit=ARGV.shift || 500
+
+until i.triangle.factor.length >= limit.to_i
+    i+=1
+    #puts "#{i} = #{i.triangle.factor.length}"
+end
+puts  "First  i = #{i}, whose triangle is #{i.triangle} with  #{i.triangle.factor.length} factors"
